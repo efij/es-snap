@@ -41,7 +41,7 @@ class SnapshotManager:
 
     def delete_index(self,index):
         try:
-            getrepository = self.connect.delete(index=index,ignore=[405,404])
+            getrepository = self.connect.delete_by_query(index=index,body={"query": {"match_all": {}}})
 
         except Exception as e:
             raise Exception(str(e))
@@ -94,14 +94,16 @@ class SnapshotManager:
 
     def create_snapshot(self,repository,snapshot,body,master_timeout=None):
         try:
-            return self.connect.snapshot.create(repository=repository,
-                                                snapshot=snapshot+str(datetime.now()).replace(" ",''),
-                                                body=body,
-                                                master_timeout=master_timeout)
+            name=snapshot+str(datetime.now()).replace(" ",'')
+            self.connect.snapshot.create(repository=repository,
+                                         snapshot=name,
+                                         body=body,
+                                         master_timeout=master_timeout,
+                                         wait_for_completion = True)
 
         except Exception as e:
             raise Exception(str(e))
-
+        return name
 
 
 
@@ -147,14 +149,9 @@ if __name__ == '__main__':
     sm = parse_configuration('snap.ini')
     a=SnapshotManager(sm["cloud_id"],sm["usr"],sm["password"])
 
+    a.add_index(sm["index_name"],int(sm["id"]),json.loads(sm["index_body"]))
+    name = a.create_snapshot(sm["repository_name"],sm["snapshot_prefix"],{"indices":sm["index_name"],"query":{"range" : {"timestamp":{"gte":"2020-04-2302:11:40.633737","lte":"now"}}}})
+    a.delete_index(sm["index_name"])
+    a.snapshot_restore(sm["repository_name"],name,{"indices":sm["index_name"],"include_global_state":True,"rename_pattern":sm["index_name"],"rename_replacement":sm["index_restore_name"]})
 
-
-
-    '''body have to be a dict'''
-
-   a.add_index(sm["index_name"],int(sm["id"]),json.loads(sm["index_body"]))
-   a.create_snapshot(sm["repository_name"],sm["snapshot_prefix"],{"indices":sm["index_name"],"query":{"range" : {"timestamp":{"gte":"2020-04-2302:11:40.633737","lte":"now"}}}})
-   a.delete_index(sm["index_name"])
-  a.snapshot_restore(sm["repository_name"],sm["snapshot_prefix"],{"indices":sm["index_name"],"include_global_state":True,"rename_pattern":sm["index_name"],"rename_replacement":sm["index_restore_name"]})
-
-
+'''body have to be a dict'''
