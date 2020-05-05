@@ -25,6 +25,7 @@ function:
 
 
 
+
 class:
 
     class SnapshotManager:
@@ -39,3 +40,9 @@ class:
         snapshot_delete(self,repository,snapshot,master_timeout=None) : delete snapshot from db
         snapshot_restore(self, repository, snapshot, body=None, master_timeout=None) restore snapshot
         NOTE: THE BODY PARAMETER HAS TO BE DICT!!
+
+
+IF YOU WANT TO RUN SOME FUNCTION EVERYDAY :
+1) To edit a crontab entries, use crontab -e.
+2)ADD : {time} * * * {file_loction} {parser parameter depending on the function you want to run}
+NOTE: THE TIME NEED TO BE - seconds  minutes, (00 09 mean 9 AM)
