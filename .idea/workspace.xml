@@ -1,14 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:origin/master" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="968e5ad6-5411-4128-8458-625fcec119d4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/es-snap.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/es-snap.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/snap.ini" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/snap.py" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/elastic.egg-info/README.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/elastic/snap.ini" beforeDir="false" afterPath="$PROJECT_DIR$/elastic/snap.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/elastic/snap.py" beforeDir="false" afterPath="$PROJECT_DIR$/elastic/snap.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,10 +107,50 @@
       <option name="presentableId" value="Default" />
       <updated>1588602278734</updated>
     </task>
+    <task id="LOCAL-00001" summary="support cli and pip install">
+      <created>1588675517114</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1588675517114</updated>
+    </task>
+    <task id="LOCAL-00002" summary="support cli and pip install">
+      <created>1588675587678</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1588675587678</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="support cli and pip install" />
+    <option name="LAST_COMMIT_MESSAGE" value="support cli and pip install" />
   </component>
   <component name="WindowStateProjectService">
     <state x="568" y="227" key="#Notifications" timestamp="1588675081056">
@@ -119,31 +181,35 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="302" y="353" key="Github.CreateGistDialog/0.0.1600.860@0.0.1600.860" timestamp="1588614414340" />
-    <state width="1579" height="155" key="GridCell.Tab.0.bottom" timestamp="1588674726301">
+    <state width="1345" height="178" key="GridCell.Tab.0.bottom" timestamp="1588675419622">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1579" height="155" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1588674726301" />
+    <state width="1345" height="178" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1588675419622" />
     <state width="1579" height="222" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1588605688487" />
-    <state width="1579" height="155" key="GridCell.Tab.0.center" timestamp="1588674726301">
+    <state width="1345" height="178" key="GridCell.Tab.0.center" timestamp="1588675419622">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1579" height="155" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1588674726301" />
+    <state width="1345" height="178" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1588675419622" />
     <state width="1579" height="222" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1588605688487" />
-    <state width="1579" height="155" key="GridCell.Tab.0.left" timestamp="1588674726300">
+    <state width="1345" height="178" key="GridCell.Tab.0.left" timestamp="1588675419622">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1579" height="155" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1588674726300" />
+    <state width="1345" height="178" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1588675419621" />
     <state width="1579" height="222" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1588605688487" />
-    <state width="1579" height="155" key="GridCell.Tab.0.right" timestamp="1588674726301">
+    <state width="1345" height="178" key="GridCell.Tab.0.right" timestamp="1588675419622">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1579" height="155" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1588674726301" />
+    <state width="1345" height="178" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1588675419622" />
     <state width="1579" height="222" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1588605688487" />
     <state x="0" y="18" key="SettingsEditor" timestamp="1588667619746">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="0" y="18" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1588667619746" />
     <state x="0" y="78" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1588606309322" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1588675642475">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1588675642475" />
     <state x="463" y="180" width="672" height="678" key="search.everywhere.popup" timestamp="1588602935795">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -156,6 +222,16 @@
           <url>file://$PROJECT_DIR$/geo/snap.py</url>
           <line>3</line>
           <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/elastic/snap.py</url>
+          <line>111</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/elastic/snap.py</url>
+          <line>81</line>
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

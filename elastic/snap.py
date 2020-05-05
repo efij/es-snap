@@ -54,12 +54,12 @@ class SnapshotManager:
             raise Exception(str(e))
 
     def snapshot_create_repository(self, repository, repository_body, master_timeout=None):
-        #try:
-        self.connect.snapshot.create_repository(repository=repository,
+        try:
+            self.connect.snapshot.create_repository(repository=repository,
                                                     body=repository_body,
                                                     master_timeout=master_timeout)
-        #except Exception as e:
-        #    raise Exception(str(e))
+        except Exception as e:
+            raise Exception(str(e))
 
     def create_snapshot(self, repository, snapshot, body=None):
         try:
@@ -97,6 +97,17 @@ class SnapshotManager:
         except Exception as e:
             raise Exception(str(e))
 
+def parse_configuration(confFile):
+    config = configparser.ConfigParser()
+    with codecs.open(confFile, 'r') as f:
+        config.read_file(f)
+    conection = dict()
+    for ops in config.options("conection"):
+        if config.get('conection', ops) == "":
+            conection[ops] = None
+        else:
+            conection[ops] = config.get('conection', ops)
+    return conection
 
 def connect():
     path=str(pathlib.Path(__file__).parent.absolute())+'\snap.ini'
