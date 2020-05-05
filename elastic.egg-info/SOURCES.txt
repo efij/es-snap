@@ -1,0 +1,8 @@
+setup.py
+elastic/__init__.py
+elastic/snap.ini
+elastic/snap.py
+elastic.egg-info/PKG-INFO
+elastic.egg-info/SOURCES.txt
+elastic.egg-info/dependency_links.txt
+elastic.egg-info/top_level.txt
